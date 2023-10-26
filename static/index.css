@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500&display=swap');
+
 :root {
   --bg-black: #191c22;
   --post-black: #121212;
@@ -5,30 +7,34 @@
   --main-orange: #ffc306;
   --text-grey: #abb8c3;
   --header-grey: #2d3338;
-  --text-size: 1.2rem;
+  --text-size: 1rem;
   --header-size: 1.5rem;
+  --title-font: 'Noto Sans', sans-serif;
+  font-family: 'Noto Serif JP', serif;
   padding: 0;
   margin: 0;
 }
 
 body {
   background-color: var(--bg-black);
-  color: white;
+  color: var(--bg-black);
   font-size: var(--text-size);
   margin: 0;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 nav,
 header,
 main,
 footer {
-  padding: 12px 48px;
+  padding: 0 48px;
 }
 
+/* -- NAVBAR -- */
 nav {
   height: 100px;
   display: flex;
@@ -47,29 +53,104 @@ nav {
 .nav-content {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 5rem;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav-links li a {
   color: white;
 }
 
+.nav-links li a:hover {
+  color: var(--main-orange);
+  transition: ease-in-out 0.3s;
+}
+
 .toggle-button {
   background-color: inherit;
   border: none;
+  cursor: pointer;
 }
 
 .toggle-button img {
   width: 50px;
 }
 
+/* -- HEADER -- */
 header {
-  background-color: var(--main-orange);
-  height: calc(100vh - 110px);
+  background-image: linear-gradient(to top right, #ff9700, #ffc306);
+  height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  text-wrap: balance;
+}
+
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+header h2 {
+  width: 70%;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 48px;
+  background-color: #ffebcc;
+  border: #e7a84b 1px solid;
+  border-radius: 16px;
+}
+
+.searchbox input {
+  font-family: inherit;
+  font-size: 0.8rem;
+  border-radius: 16px;
+  padding: 0 0 0 42px;
+  width: inherit;
+  height: inherit;
+  border: none;
+  text-overflow: ellipsis;
+  background: transparent;
+  background-image: url('search.png');
+  background-size: 14px;
+  background-repeat: no-repeat;
+  background-position: 16px center;
+  transition: linear 100ms;
+}
+
+.searchbox input:focus {
+  outline: none;
+  border: var(--secondary-orange) 2px solid;
+  box-shadow: 0px 2px 4px 2px #e7a84b;
+  background-color: #ffffff;
+  transition: linear 100ms;
+}
+
+@media (width < 1024px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h2 {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .searchbox {
+    width: 60%;
+  }
 }

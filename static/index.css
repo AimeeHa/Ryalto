@@ -10,6 +10,7 @@
   --text-size: 1rem;
   --header-size: 1.5rem;
   --title-font: 'Noto Sans', sans-serif;
+  --section-height: calc(100vh - 100px);
   font-family: 'Noto Serif JP', serif;
   padding: 0;
   margin: 0;
@@ -40,9 +41,13 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-black);
 }
 
-.nav-logo {
+.nav-logo,
+.nav-logo a {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -81,10 +86,14 @@ nav {
   width: 50px;
 }
 
+.menu-button {
+  display: none;
+}
+
 /* -- HEADER -- */
 header {
   background-image: linear-gradient(to top right, #ff9700, #ffc306);
-  height: calc(100vh - 100px);
+  height: var(--section-height);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,7 +149,45 @@ header h2 {
   transition: linear 100ms;
 }
 
+/* -- MAIN -- */
+main {
+  height: var(--section-height);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+main section {
+  min-width: 360px;
+  padding: 24px;
+  color: var(--bg-black);
+  background-color: #ffebcc;
+  border-radius: 16px;
+}
+
 @media (width < 1024px) {
+  .nav-logo a {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-button {
+    display: flex;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-button img {
+    width: 50px;
+  }
+
   header h1 {
     font-size: 2.5rem;
   }

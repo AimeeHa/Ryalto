@@ -5,14 +5,22 @@
   <meta charset="UTF-8">
   <title>Ryalto</title>
   <link rel="stylesheet" type="text/css" href="./static/index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="./static/logo.png" alt="Ryalto logo">
-      <h2>Developer Page</h2>
-    </a>
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="./static/logo.png" alt="Ryalto logo">
+        <h2>Developer Page</h2>
+      </a>
+
+      <!-- hamburger menu only displays on screen width < 1024px -->
+      <button class="menu-button">
+        <img src="./static/hamburger.png" alt="Hamburger menu">
+      </button>
+    </div>
 
     <div class="nav-content">
       <ul class="nav-links">
@@ -43,7 +51,17 @@
 
   <main>
     <section>
-      <h3>Blog Posts</h3>
+      <h3>TRENDING</h3>
+      <p>See latest blog posts here</p>
+    </section>
+
+    <section>
+      <h3>TECHNICAL</h3>
+      <p>See latest blog posts here</p>
+    </section>
+
+    <section>
+      <h3>HANDBOOK</h3>
       <p>See latest blog posts here</p>
     </section>
   </main>

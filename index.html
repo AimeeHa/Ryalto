@@ -12,7 +12,7 @@
   <nav>
     <div class="nav-logo">
       <a href="index.html">
-        <img src="./static/logo.png" alt="Ryalto logo">
+        <img src="./static/logo.png" alt="Ryalto logo" id="logo">
         <h2>Developer Page</h2>
       </a>
 
@@ -24,9 +24,9 @@
 
     <div class="nav-content">
       <ul class="nav-links">
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="careers.html">Careers</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#team">Our Team</a></li>
+        <li><a href="index.html#careers">Careers</a></li>
       </ul>
 
       <button class="toggle-button">
@@ -50,20 +50,118 @@
   </header>
 
   <main>
-    <section>
-      <h3>TRENDING</h3>
-      <p>See latest blog posts here</p>
-    </section>
 
-    <section>
-      <h3>TECHNICAL</h3>
-      <p>See latest blog posts here</p>
-    </section>
+    <!-- BLOG POSTS SECTION -->
+    <section id="blog">
+      <!-- 3 Most viewed posts -->
+      <section class="category trending">
+        <section>
+          <h3>TRENDING</h3>
+          <article class="posts-root">
+            <article class="posts">
+              <h4>POPULAR POST 1</h4>
+              <p class="author-date">Preview Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nam elementum elementum massa vel finibus. </p>
+            </article>
 
-    <section>
-      <h3>HANDBOOK</h3>
-      <p>See latest blog posts here</p>
-    </section>
+            <article class="posts">
+              <h4>POPULAR POST 2</h4>
+              <p class="author-date">Preview Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nam elementum elementum massa vel finibus. </p>
+            </article>
+
+            <article class="posts">
+              <h4>POPULAR POST 3</h4>
+              <p class="author-date">Preview Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Nam elementum elementum massa vel finibus. </p>
+            </article>
+          </article>
+        </section>
+      </section>
+
+      <!-- Top 3 Posts in Hanbook category -->
+      <section class="category">
+        <h3>HANDBOOK</h3>
+        <img src="./static/handbook.png" alt="Handbook">
+        <article class="posts-root">
+          <article class="posts">
+            <h4>POST 1</h4>
+            <p class="author-date">
+              <img src="./static/author.png" alt="Author">
+              <span>
+                <span>Author</span>
+                <span>01/01/23</span>
+              </span>
+            </p>
+          </article>
+
+          <article class="posts">
+            <h4>POST 2</h4>
+            <p class="author-date">
+              <img src="./static/author.png" alt="Author">
+              <span>
+                <span>Author</span>
+                <span>01/01/23</span>
+              </span>
+            </p>
+          </article>
+
+          <article class="posts">
+            <h4>POST 3</h4>
+            <p class="author-date">
+              <img src="./static/author.png" alt="Author">
+              <span>
+                <span>Author</span>
+                <span>01/01/23</span>
+              </span>
+            </p>
+          </article>
+          <a class="view-more">More on Handbook <span>&#8594;</span></a>
+
+        </article>
+      </section>
+
+      <!-- Top 3 Posts in Technical category -->
+      <section class="category">
+        <h3>TECHNICAL</h3>
+        <img src="./static/technical.png" alt="Technical">
+        <article class="posts-root">
+          <article class="posts">
+            <h4>POST 1</h4>
+            <p class="author-date">
+              <img src="./static/author.png" alt="Author">
+              <span>
+                <span>Author</span>
+                <span>01/01/23</span>
+              </span>
+            </p>
+          </article>
+
+          <article class="posts">
+            <h4>POST 2</h4>
+            <p class="author-date">
+              <img src="./static/author.png" alt="Author">
+              <span>
+                <span>Author</span>
+                <span>01/01/23</span>
+              </span>
+            </p>
+          </article>
+
+          <article class="posts">
+            <h4>POST 3</h4>
+            <p class="author-date">
+              <img src="./static/author.png" alt="Author">
+              <span>
+                <span>Author</span>
+                <span>01/01/23</span>
+              </span>
+            </p>
+          </article>
+
+          <a class="view-more">More on Technical <span>&#8594;</span></a>
+        </article>
+      </section>
   </main>
 
   <footer>

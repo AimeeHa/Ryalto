@@ -4,13 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Ryalto</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./static/index.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <nav>
-    <div class="nav-logo">
+    <div class="nav-left">
       <a href="index.html">
         <img src="./static/logo.png" alt="Ryalto logo" id="logo">
         <h2>Developer Page</h2>
@@ -22,7 +24,7 @@
       </button>
     </div>
 
-    <div class="nav-content">
+    <div class="nav-right">
       <ul class="nav-links">
         <li><a href="index.html#blog">Blog</a></li>
         <li><a href="index.html#team">Our Team</a></li>
@@ -37,41 +39,38 @@
 
   <header>
     <h1>Welcome to our Developer Page!</h1>
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum elementum massa vel
-      finibus. Ut ac ultricies ex, non finibus diam. Sed eu diam in risus pharetra elementum. Sed in
-      diam nec velit suscipit luctus. Nam nulla purus, consectetur sed libero gravida, molestie
-      iaculis justo. Mauris vitae aliquet neque. Morbi quis ipsum id ex porttitor laoreet non in
-      sapien. Curabitur lectus dui, porta in lobortis et, maximus sed ligula. Donec sed aliquam
-      augue, iaculis mollis leo.</h2>
+    <p>This page is dedicated to offering you an exclusive peek behind the curtains,
+      <br />where we share the latest developments, innovations, and noteworthy accomplishments from
+      our valuable members.
+    </p>
 
     <form action="blog.html" method="post" class="searchbox">
-      <input type="text" name="search" placeholder="Already have a topic in mind?">
+      <input type="text" name="search" placeholder="If you need to find certain things...">
     </form>
   </header>
 
   <main>
-
     <!-- BLOG POSTS SECTION -->
     <section id="blog">
       <!-- 3 Most viewed posts -->
       <section class="category trending">
         <section>
-          <h3>TRENDING</h3>
+          <h3>MUST-READ POSTS</h3>
           <article class="posts-root">
-            <article class="posts">
-              <h4>POPULAR POST 1</h4>
+            <article class="trending-posts">
+              <h4><a href="blog.html" class="post-link">MUST-READ POST 1</a></h4>
               <p class="author-date">Preview Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Nam elementum elementum massa vel finibus. </p>
             </article>
 
-            <article class="posts">
-              <h4>POPULAR POST 2</h4>
+            <article class="trending-posts">
+              <h4><a href="blog.html" class="post-link">MUST-READ POST 2</a></h4>
               <p class="author-date">Preview Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Nam elementum elementum massa vel finibus. </p>
             </article>
 
-            <article class="posts">
-              <h4>POPULAR POST 3</h4>
+            <article class="trending-posts">
+              <h4><a href="blog.html" class="post-link">MUST-READ POST 3</a></h4>
               <p class="author-date">Preview Lorem ipsum dolor sit amet, consectetur
                 adipiscing elit. Nam elementum elementum massa vel finibus. </p>
             </article>
@@ -84,38 +83,9 @@
         <h3>HANDBOOK</h3>
         <img src="./static/handbook.png" alt="Handbook">
         <article class="posts-root">
-          <article class="posts">
-            <h4>POST 1</h4>
-            <p class="author-date">
-              <img src="./static/author.png" alt="Author">
-              <span>
-                <span>Author</span>
-                <span>01/01/23</span>
-              </span>
-            </p>
-          </article>
-
-          <article class="posts">
-            <h4>POST 2</h4>
-            <p class="author-date">
-              <img src="./static/author.png" alt="Author">
-              <span>
-                <span>Author</span>
-                <span>01/01/23</span>
-              </span>
-            </p>
-          </article>
-
-          <article class="posts">
-            <h4>POST 3</h4>
-            <p class="author-date">
-              <img src="./static/author.png" alt="Author">
-              <span>
-                <span>Author</span>
-                <span>01/01/23</span>
-              </span>
-            </p>
-          </article>
+          <article class="posts"></article>
+          <article class="posts"></article>
+          <article class="posts"></article>
           <a class="view-more">More on Handbook <span>&#8594;</span></a>
 
         </article>
@@ -126,47 +96,88 @@
         <h3>TECHNICAL</h3>
         <img src="./static/technical.png" alt="Technical">
         <article class="posts-root">
-          <article class="posts">
-            <h4>POST 1</h4>
-            <p class="author-date">
-              <img src="./static/author.png" alt="Author">
-              <span>
-                <span>Author</span>
-                <span>01/01/23</span>
-              </span>
-            </p>
-          </article>
-
-          <article class="posts">
-            <h4>POST 2</h4>
-            <p class="author-date">
-              <img src="./static/author.png" alt="Author">
-              <span>
-                <span>Author</span>
-                <span>01/01/23</span>
-              </span>
-            </p>
-          </article>
-
-          <article class="posts">
-            <h4>POST 3</h4>
-            <p class="author-date">
-              <img src="./static/author.png" alt="Author">
-              <span>
-                <span>Author</span>
-                <span>01/01/23</span>
-              </span>
-            </p>
-          </article>
+          <article class="posts"></article>
+          <article class="posts"></article>
+          <article class="posts"></article>
 
           <a class="view-more">More on Technical <span>&#8594;</span></a>
         </article>
       </section>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team">
+      <h2>OUR TEAM</h2>
+      <p>Meet the people behind the scenes who make Ryalto possible.</p>
+      <ul id="team-members"></ul>
+    </section>
+
+    <!-- CAREERS SECTION -->
+    <section id="careers">
+      <h2>CAREERS</h2>
+      <p>Join our team and help us build the future.</p>
+      <a href="https://www.linkedin.com/company/ryalto/" class="view-more">Visit our LinkedIn
+        <span>&#8594;</span></a>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2023 by Aimee Ha</p>
+    <p>&copy; Aimee Ha - 2023</p>
+    <ul class="footer-links">
+      <li>
+        <a href="https://ryalto.group/">
+          <i class="fa fa-home" style="font-size:24px"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/ryalto">
+          <i class="fa fa-twitter" style="font-size:24px"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ryalto">
+          <i class="fa fa-github" style="font-size:24px"></i>
+        </a>
+      </li>
+    </ul>
   </footer>
+
+  <!-- Templates for repetitive contents -->
+  <template id="team-template">
+    <li class="individual">
+      <img src="./static/author.png" alt="Team member">
+      <h3>Team Member</h3>
+      <p>Position</p>
+    </li>
+  </template>
+
+  <template id="post-template">
+    <h4><a href="blog.html" class="post-link">BLOG POST</a></h4>
+    <p class="author-date">
+      <img src="./static/author.png" alt="Author">
+      <span>
+        <span>Author</span>
+        <span>01/01/23</span>
+      </span>
+    </p>
+  </template>
+
+  <script>
+    const template = document.getElementById("team-template");
+    const team = document.getElementById("team-members");
+    for (let i = 0; i < 12; i++) {
+      const clone = document.importNode(template.content, true);
+      team.appendChild(clone);
+    }
+
+    const postTemplate = document.getElementById("post-template");
+    const posts = document.getElementsByClassName("posts");
+    for (let i = 0; i < posts.length; i++) {
+      const clone = document.importNode(postTemplate.content, true);
+      posts[i].appendChild(clone);
+    }
+  </script>
+
 </body>
 
 </html>

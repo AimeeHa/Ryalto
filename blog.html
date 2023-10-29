@@ -9,16 +9,23 @@
 
 <body>
   <nav>
-    <a href="index.html" class="nav-logo">
-      <img src="./static/logo.png" alt="Ryalto logo">
-      <h2>Developer Page</h2>
-    </a>
+    <div class="nav-left">
+      <a href="index.html">
+        <img src="./static/logo.png" alt="Ryalto logo" id="logo">
+        <h2>Developer Page</h2>
+      </a>
 
-    <div class="nav-content">
+      <!-- hamburger menu only displays on screen width < 1024px -->
+      <button class="menu-button">
+        <img src="./static/hamburger.png" alt="Hamburger menu">
+      </button>
+    </div>
+
+    <div class="nav-right">
       <ul class="nav-links">
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="team.html">Our Team</a></li>
-        <li><a href="careers.html">Careers</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+        <li><a href="index.html#team">Our Team</a></li>
+        <li><a href="index.html#careers">Careers</a></li>
       </ul>
 
       <button class="toggle-button">
@@ -26,13 +33,24 @@
       </button>
     </div>
   </nav>
-
   <header>
-    <h1>Blog Posts</h1>
+    <h1>Blog Post Title</h1>
+    <p class="author-date">
+      <img src="./static/author.png" alt="Author">
+      <span>
+        <span>Author</span>
+        <span>01/01/23</span>
+      </span>
+    </p>
   </header>
 
   <main>
-
+    <article>
+      <h2>Post 1</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, nisl vitae aliquam
+        aliquet, diam diam aliquam nunc, vitae aliquam nisl nunc vitae nisl. Nulla facilisi. Nulla
+        facilisi. Nulla facilisi. Nulla facilisi. Nulla facilisi
+    </article>
   </main>
 
   <footer>

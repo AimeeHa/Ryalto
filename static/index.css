@@ -62,7 +62,6 @@ nav {
   z-index: 1;
 }
 
-.nav-left,
 .nav-left > a {
   display: flex;
   align-items: center;

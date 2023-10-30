@@ -355,10 +355,11 @@ main {
 /* -- FOOTER -- */
 footer {
   width: inherit;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 3rem;
+  padding: 0 3rem;
   border-top: 2px solid var(--header-grey);
   color: var(--text-grey);
   font-family: var(--title-font);
@@ -367,6 +368,72 @@ footer {
 
 .footer-links > li > a {
   color: var(--text-grey);
+}
+
+/* -- BLOG POST CONTENT -- */
+.blog-header {
+  height: 240px;
+  font-family: var(--title-font);
+  gap: 1rem;
+}
+
+.blog-header > h1,
+.blog-header > p {
+  width: 60%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blog-header > h1 {
+  font-size: 2.3rem;
+}
+
+.blog-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.blog-main {
+  min-height: calc(var(--section-height) - 360px);
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.blog-content {
+  width: 60%;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-content > h2 {
+  font-size: 1.8rem;
+}
+
+.blog-content > h3 {
+  font-size: 1.25rem;
+}
+
+.blog-content > h4 {
+  font-size: 1rem;
+}
+
+.blog-content > p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  opacity: 0.9;
+}
+
+.blog-content span {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  opacity: 0.8;
 }
 
 /* -- RESPONSIVE -- */
@@ -423,5 +490,12 @@ footer {
   #team-members {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
+  }
+
+  .blog-header > h1,
+  .blog-header > p,
+  .blog-content {
+    width: 100%;
+    padding: 0 2rem;
   }
 }

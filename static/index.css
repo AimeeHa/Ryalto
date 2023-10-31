@@ -38,7 +38,7 @@ nav,
 header,
 main,
 footer {
-  padding: 0 48px;
+  padding: 0 3rem;
 }
 
 h1,
@@ -62,7 +62,7 @@ nav {
   z-index: 1;
 }
 
-.nav-left > a {
+.nav-left {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -74,26 +74,25 @@ nav {
   height: 40px;
 }
 
-.nav-right {
+.nav-right,
+.footer-links {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 3rem;
   font-family: var(--title-font);
 }
 
 .nav-links,
 .footer-links {
   list-style: none;
-  display: flex;
-  gap: 3rem;
 }
 
-.nav-links > li > a {
+.nav-links > a {
   color: white;
 }
 
-.nav-links > li > a:hover,
-.nav-left > a:hover {
+.nav-links > a:hover,
+.nav-left:hover {
   color: var(--main-orange);
   transition: ease-in-out 0.3s;
 }
@@ -102,6 +101,8 @@ nav {
   background-color: inherit;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .toggle-button > img {
@@ -224,7 +225,8 @@ main {
   border-radius: 8px;
 }
 
-.post-link {
+.post-link,
+.result-link {
   color: inherit;
   display: flex;
   flex-direction: column;
@@ -442,9 +444,58 @@ footer {
   opacity: 0.8;
 }
 
+/* -- SEARCH PAGE -- */
+.search-header {
+  background-image: none;
+  height: fit-content;
+  padding: 3rem 0 0;
+}
+
+.searchbox.search-page,
+.search-results,
+.search-end {
+  max-width: 800px;
+  width: 60%;
+}
+
+.searchbox.search-page > input {
+  width: 100%;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  min-height: 72px;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid var(--secondary-orange);
+  padding: 1.5rem 0;
+}
+
+.search-post:hover {
+  color: var(--secondary-orange);
+  transition: ease-in-out 0.3s;
+}
+
+.search-end {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: var(--text-grey);
+  font-family: 'Merriweather', serif;
+}
+
 /* -- RESPONSIVE -- */
 @media (width < 1024px) {
-  .nav-left a {
+  .nav-left {
     font-size: 0.8rem;
   }
 
@@ -500,8 +551,27 @@ footer {
 
   .blog-header > h1,
   .blog-header > p,
-  .blog-content {
+  .blog-content,
+  .search-results {
     width: 100%;
     padding: 0 2rem;
+  }
+
+  .searchbox.search-page {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .search-post {
+    padding: 1rem;
+  }
+
+  nav,
+  footer {
+    padding: 0 1rem;
+  }
+
+  .footer-links {
+    gap: 1rem;
   }
 }

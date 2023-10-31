@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ryalto</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./static/index.css" />
+</head>
+
+<body>
+  <nav>
+    <a href="index.html" class="nav-left">
+      <img src="./static/logo.png" alt="Ryalto logo" id="logo">
+      <h2>Developer Page</h2>
+    </a>
+
+    <ul class="nav-right">
+      <li class="nav-links"><a href="index.html#blog">Blog</a></li>
+      <li class="nav-links"><a href="index.html#team">Our Team</a></li>
+      <li class="nav-links"><a href="index.html#careers">Careers</a></li>
+      <button class="toggle-button">
+        <img src="./static/toggle.png" alt="Theme Toggle">
+      </button>
+      <!-- hamburger menu only displays on screen width < 1024px -->
+      <button class="menu-button">
+        <img src="./static/hamburger.png" alt="Hamburger menu">
+      </button>
+    </ul>
+  </nav>
+
+  <header class="search-header">
+    <form action="blog.html" method="post" class="searchbox search-page">
+      <input type="text" name="search" placeholder="Searched query here">
+    </form>
+  </header>
+
+  <main>
+    <section class="search-results">
+      <article class="search-post"></article>
+      <article class="search-post"></article>
+      <article class="search-post"></article>
+      <article class="search-post"></article>
+      <article class="search-post"></article>
+      <article class="search-post"></article>
+    </section>
+
+    <p class="search-end">You have reached the end!</p>
+  </main>
+
+  <footer>
+    <p>&copy; Aimee Ha - 2023</p>
+    <ul class="footer-links">
+      <li>
+        <a href="https://ryalto.group/">
+          <i class="fa fa-home" style="font-size:24px"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/ryalto">
+          <i class="fa fa-twitter" style="font-size:24px"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/ryalto">
+          <i class="fa fa-github" style="font-size:24px"></i>
+        </a>
+      </li>
+    </ul>
+  </footer>
+
+  <template id="results-template">
+    <a href="blog.html" class="result-link">
+      <h4>SEARCH RESULT</h4>
+      <p class="author-date">Preview Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Nam elementum elementum massa vel finibus. </p>
+    </a>
+  </template>
+
+  <script>
+    const searchTemplate = document.getElementById("results-template");
+    const search = document.getElementsByClassName("search-post");
+    for (let i = 0; i < search.length; i++) {
+      const clone = document.importNode(searchTemplate.content, true);
+      search[i].appendChild(clone);
+    }
+  </script>
+</body>
+
+</html>
